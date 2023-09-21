@@ -1,5 +1,6 @@
 import './App.css'
-import SetateFulForm from './components/StetateFulForm/SetateFulForm'
+import RefFrom from './components/RefForm/RefFrom'
+// import SetateFulForm from './components/StetateFulForm/SetateFulForm'
 // import SimpleForm from './components/SimpleForm/SimpleForm'
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       
       <h1>Vite + React</h1>
       {/* <SimpleForm></SimpleForm> */}
-      <SetateFulForm></SetateFulForm>
+      {/* <SetateFulForm></SetateFulForm> */}
+      <RefFrom></RefFrom>
 
       
     </>

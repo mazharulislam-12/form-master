@@ -1,17 +1,44 @@
+import { useState } from "react";
 
 const SetateFulForm = () => {
 
-    const handleSubmit = e =>{
+    const [name, setName] = useState(null);
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
 
+    const handleSubmit = e =>{
+        e.preventDefault();
+        console.log(email, password, name)
     }
+
+    const handleNameChange = e => {
+        setName(e.target.value)
+    }
+
+    const handleEmailChange = e =>{
+        console.log(e.target.value)
+        setEmail(e.target.value)
+    }
+
+    const handlePasswordChange = e =>{
+        setPassword(e.target.value)
+    }
+
 
     return (
         <div onSubmit={handleSubmit}>
-            <input type="text" name="name" />
+            <input
+                onChange={handleNameChange}
+            type="text" name="name" />
             <br />
-            <input type="email" name="email" id="" />
+            <input
+                onChange={handleEmailChange}
+            type="email" name="email" id="" />
             <br />
-            <input type="password" name="password" id="" />
+
+            <input
+                onChange={handlePasswordChange}
+            type="password" name="password" id="" />
             <br />
             <input type="submit" value="Submit" />
         </div>
